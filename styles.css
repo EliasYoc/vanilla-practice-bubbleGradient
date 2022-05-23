@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* STYLES */
+.parent {
+  font-family: "Montserrat", sans-serif;
+  background: rgb(103, 255, 115);
+  background: linear-gradient(
+    0deg,
+    rgba(103, 255, 115, 1) 8%,
+    rgba(95, 216, 159, 1) 42%,
+    rgba(85, 165, 217, 1) 79%
+  );
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* to hide the linear-gradient background */
+.parent::after {
+  content: "";
+  background-color: #fff;
+  flex-grow: 1;
+}
+/* use border or border-width to apply white background around the element insted of padding*/
+.msg-wrapper {
+  display: flex;
+  flex-direction: reverse;
+  border: 8px solid #fff;
+}
+.msg-wrapper::before {
+  content: "";
+  background-color: #fff;
+  flex-grow: 1;
+}
+
+.msg-wrapper > .bubble {
+  padding: 8px;
+  margin: 0;
+  color: #fff;
+  position: relative;
+}
+.msg-wrapper:not(.mine) {
+  flex-direction: row-reverse;
+}
+.msg-wrapper:not(.mine) > .bubble {
+  background-color: rgb(139, 139, 139);
+}
+/* border and top,bottom, right, lelft must be the same px */
+.bubble > .radius {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 8px solid #fff;
+  border-radius: 16px;
+  transition: border-radius 0.4s ease;
+}
