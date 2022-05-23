@@ -27,21 +27,27 @@
   background-color: #fff;
   flex-grow: 1;
 }
-/* use border or border-width to apply white background around the element insted of padding*/
 .msg-wrapper {
   display: flex;
   flex-direction: reverse;
-  border: 8px solid #fff;
+  /* border: 8px solid #fff; */
 }
-.msg-wrapper::before {
-  content: "";
-  background-color: #fff;
+.msg-wrapper > .msg-bg {
+  background-color: rgb(255, 255, 255);
   flex-grow: 1;
+  position: relative;
 }
-
+.msg-bg::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: 0px;
+  top: -2px;
+  bottom: -2px;
+}
 .msg-wrapper > .bubble {
   padding: 8px;
-  margin: 0;
+  margin: 8px 0;
   color: #fff;
   position: relative;
 }
@@ -51,7 +57,6 @@
 .msg-wrapper:not(.mine) > .bubble {
   background-color: rgb(139, 139, 139);
 }
-/* border and top,bottom, right, lelft must be the same px */
 .bubble > .radius {
   position: absolute;
   top: -10px;
