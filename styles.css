@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   height: 300px;
-  width: 300px;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -54,11 +54,17 @@
 /* border and top,bottom, right, lelft must be the same px */
 .bubble > .radius {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  border: 8px solid #fff;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 12px solid #fff;
   border-radius: 16px;
   transition: border-radius 0.4s ease;
+}
+
+@media only screen and (min-width: 650px) {
+  .parent {
+    width: 300px;
+  }
 }
