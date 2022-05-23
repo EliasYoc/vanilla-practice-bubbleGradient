@@ -30,20 +30,23 @@
 .msg-wrapper {
   display: flex;
   flex-direction: reverse;
-  /* border: 8px solid #fff; */
+  position: relative;
 }
 .msg-wrapper > .msg-bg {
   background-color: rgb(255, 255, 255);
   flex-grow: 1;
   position: relative;
 }
-.msg-bg::before {
+.msg-wrapper::before {
   content: "";
   position: absolute;
-  left: -2px;
-  right: 0px;
-  top: -2px;
-  bottom: -2px;
+  left: -5px;
+  right: -5px;
+  top: -5px;
+  bottom: -5px;
+  border-style: solid;
+  border-width: 10px 0;
+  border-color: #fff;
 }
 .msg-wrapper > .bubble {
   padding: 8px;
