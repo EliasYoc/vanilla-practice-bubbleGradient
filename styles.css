@@ -49,17 +49,19 @@
   top: -5px;
   bottom: -5px;
   border-style: solid;
-  border-width: 5px 0;
-  border-color: rgb(255, 255, 255);
+  /*increase the same px of border-width and border of the .radius */
+  border-width: 6px 0;
+  border-color: #fff;
 }
 .msg-wrapper > .bubble {
   padding: 10px;
   /* margin: 8px 0; */
   color: #fff;
   position: relative;
-  overflow: hidden;
+  contain: paint;
 }
-.msg-wrapper.mine .msg-bg {
+.msg-wrapper.mine .msg-bg,
+.msg-wrapper:not(.mine) .msg-bg {
   padding-left: 1rem;
 }
 .msg-wrapper:not(.mine) {
@@ -74,8 +76,8 @@
   left: -12px;
   right: -12px;
   bottom: -12px;
-  /* position and border are the same */
-  border: 12px solid rgb(255, 255, 255);
+  /* position and border are the same, but increase the same px in border and border-width in ::before */
+  border: 13px solid #fff;
   border-radius: 11px;
   transition: border-radius 0.4s ease;
 }
