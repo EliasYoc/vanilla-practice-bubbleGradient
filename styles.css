@@ -49,7 +49,7 @@
   top: -5px;
   bottom: -5px;
   border-style: solid;
-  /*increase the same px of border-width and border of the .radius */
+  /*increase the same px of border-width in here and border of the .radius */
   border-width: 6px 0;
   border-color: #fff;
 }
@@ -68,7 +68,7 @@
   flex-direction: row-reverse;
 }
 .msg-wrapper:not(.mine) > .bubble {
-  background-color: rgb(139, 139, 139);
+  background-color: rgb(110, 110, 110);
 }
 .bubble > .radius {
   position: absolute;
@@ -76,7 +76,7 @@
   left: -12px;
   right: -12px;
   bottom: -12px;
-  /* position and border are the same, but increase the same px in border and border-width in ::before */
+  /* position and border are the same just by increasing 1px, besides increase the same px in .radius border and border-width in ::before */
   border: 13px solid #fff;
   border-radius: 11px;
   transition: border-radius 0.4s ease;
