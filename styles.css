@@ -32,7 +32,9 @@
   flex-direction: reverse;
   position: relative;
   /* margin of .mgs-wrapper and position and border of .msg-wrapper::before are the same*/
-  margin: 4px 0;
+  /* margin: 4px 0; */
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
 }
 .msg-wrapper > .msg-bg {
   background-color: rgb(255, 255, 255);
