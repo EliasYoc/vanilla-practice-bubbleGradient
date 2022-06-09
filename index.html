@@ -16,6 +16,7 @@
 
 <body>
   <section class="parent">
+    <div class="absolute-bg"></div>
     <div class="msg-wrapper mine">
       <span class="msg-bg"></span>
       <p class="bubble"><span class="radius"></span>1 Mesage</p>
@@ -83,10 +84,21 @@
         adipisicing elit. Esse, nisi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, mollitia.
       </p>
     </div>
+    <div class="msg-wrapper mine">
+      <span class="msg-bg"></span>
+      <p class="bubble">
+        <span class="radius"></span> Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Esse, nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero itaque ullam ab
+        sapiente sed facilis cupiditate atque fugit, officia consequuntur rerum ratione aut debitis magnam maiores amet,
+        harum odio quae suscipit veritatis iure! Suscipit, dicta! Ab fugiat labore vitae accusantium unde, quod beatae.
+        Quae laudantium obcaecati magnam temporibus, velit quo.
+      </p>
+    </div>
   </section>
   <!-- I copied min 12 due to '.bubble > .radius' selector-->
   <input type="range" min="11" max="35" value="5" name="border" id="range" />
   <span id="value"></span>
+  <button id="rotate" class="btn-rotate">Rotar fondo (animation available on chrome and edge)</button>
   <script src="index.js"></script>
 </body>
 
