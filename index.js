@@ -16,9 +16,9 @@ $span.textContent = $range.value;
 // ROTATE
 const $btnRotate = d.getElementById("rotate");
 const $parentGradient = d.querySelector(".parent");
-let deg = 90;
+let deg = 135;
 const rotateGradientBackground = () => {
-  if (deg > 360) deg = 90;
+  if (deg > 315) deg = 45;
   $parentGradient.style.setProperty("--a", `${deg}deg`);
   console.log(deg);
   deg += 90;

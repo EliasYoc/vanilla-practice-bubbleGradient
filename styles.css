@@ -6,7 +6,8 @@
 
 /* STYLES */
 .parent {
-  --a: 0deg;
+  /* moz */
+  --a: 45deg;
   font-family: "Montserrat", sans-serif;
   /* background: rgb(103, 255, 115);
   background: linear-gradient(
@@ -30,11 +31,11 @@
   position: relative;
   transition: --a 0.5s;
 }
-/* 0,120, 240, 0 */
+/* 135deg, 225deg, 315deg || 45deg */
 @property --a {
   syntax: "<angle>";
   inherits: false;
-  initial-value: 0deg;
+  initial-value: 45deg;
 }
 
 .msg-wrapper {
