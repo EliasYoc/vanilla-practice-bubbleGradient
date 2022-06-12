@@ -13,14 +13,39 @@ $range.addEventListener("input", (e) => {
 });
 $span.textContent = $range.value;
 
-// ROTATE
+//----------------------- ROTATE
 const $btnRotate = d.getElementById("rotate");
 const $parentGradient = d.querySelector(".parent");
-let deg = 135;
+let deg = 45;
+let prevForbiddenDeg = 90;
+//forbbiden aside degs [90,270,450,630]
+//deg [0, 45, 135, 180, 225, 315]
 const rotateGradientBackground = () => {
-  if (deg > 315) deg = 45;
+  if (deg === 90) deg += 45;
+  if (prevForbiddenDeg + 180 === deg) {
+    prevForbiddenDeg = deg;
+    deg += 45;
+  }
+  console.log("deg: ", deg + "°");
+  // console.log("prevdeg:", prevForbiddenDeg);
   $parentGradient.style.setProperty("--a", `${deg}deg`);
-  console.log(deg);
-  deg += 90;
+  deg += 45;
 };
 $btnRotate.addEventListener("click", () => rotateGradientBackground());
+
+//------------------------ SIMULAR MSG
+const $btnSend = d.getElementById("send");
+const sendMessage = () => {
+  const $element = `
+  <div class="msg-wrapper mine">
+    <span class="msg-bg"></span>
+    <p class="bubble">
+      <span class="radius"></span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum.
+    </p>
+  </div>
+  `;
+  $parentGradient.insertAdjacentHTML("afterbegin", $element);
+  rotateGradientBackground();
+};
+$btnSend.addEventListener("click", sendMessage);

@@ -14,7 +14,7 @@
     rel="stylesheet" />
 </head>
 
-<body>
+<body class="dark">
   <section class="parent">
     <div class="msg-wrapper mine">
       <span class="msg-bg"></span>
@@ -27,6 +27,13 @@
     <div class="msg-wrapper">
       <span class="msg-bg"></span>
       <p class="bubble"><span class="radius"></span> Message</p>
+    </div>
+    <div class="msg-wrapper ">
+      <span class="msg-bg"></span>
+      <p class="bubble">
+        <span class="radius"></span> Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Esse, nisi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, mollitia.
+      </p>
     </div>
     <div class="msg-wrapper mine">
       <span class="msg-bg"></span>
@@ -97,7 +104,8 @@
   <!-- I copied min 12 due to '.bubble > .radius' selector-->
   <input type="range" min="11" max="35" value="5" name="border" id="range" />
   <span id="value"></span>
-  <button id="rotate" class="btn-rotate">Rotar fondo (animation available on chrome and edge)</button>
+  <button id="rotate" class="btn-rotate btn-ej">Rotar fondo (animation available on chrome and edge)</button>
+  <button id="send" class="btn-ej">Enviar msg</button>
   <script src="index.js"></script>
 </body>
 
